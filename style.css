@@ -21,7 +21,6 @@ Dark Navy: #1b1b21;  */
 @import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,400italic|Alegreya+Sans:400,400italic|Alegreya:400italic,900italic);
 
 
-
 /* Basic Elements */
 
 html {
@@ -31,8 +30,8 @@ html {
 
 body { 
   font-family: 'Alegreya Sans', Verdana, Tahoma, sans-serif;
-  font-size:1.25em;
-  line-height:1.6;
+  font-size: 1.25em;
+  line-height: 1.6;
   margin: 0; 
   padding: 0;
   color: #282932; 
@@ -40,7 +39,7 @@ body {
 }
 
 p { 
-  margin:0;
+  margin: 0;
 }
 
 p + p {
@@ -49,9 +48,9 @@ p + p {
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Alegreya', Georgia, serif;
-  font-weight:normal;
-  font-style:italic;
-  color:#9bc152;
+  font-weight: normal;
+  font-style: italic;
+  color: #9bc152;
 }
 
 h1 {
@@ -62,7 +61,7 @@ h1 {
 h2 {
   font-size:2.369em;
   line-height:1.15;
-  margin:0 0 .54em;
+  margin: 0 0 .54em;
 }
 
 h3 { 
@@ -81,6 +80,7 @@ li {
 
 a:link { 
   text-decoration: none;
+  transition: all 0.4s ease;
 
 }
 a:visited { 
@@ -105,11 +105,16 @@ abbr {
 header {
   padding: 10em 4%;
   text-align: center;
+  animation: fadein 2s;
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -moz-animation: fadein 2s; /* Firefox */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera */
 }
 
 header h1 { 
   font-size: 6.2em;
-  font-weight: 600;
+  font-weight: 900;
   color: #282932;
   margin: 0;
 }
@@ -119,7 +124,7 @@ header h2 {
   font-size: 1.777em;
   letter-spacing: .3em;
   text-transform: uppercase;
-  font-style:normal;
+  font-style: normal;
 }
 
 header abbr {
@@ -167,13 +172,13 @@ header abbr {
 }
 
 .preamble h3, .requirements h3 {
-  max-width: 43rem;
+  max-width: 34rem;
   margin: 0 auto .62em;
 }
 
 .preamble p, .requirements p {
-  max-width: 43rem;
-  margin: 0 auto .62em;
+  max-width: 34rem;
+  margin: 0 auto;
   color: #f6f4ec;
 }
 
@@ -212,20 +217,20 @@ header abbr {
 }
 
 .benefits h3 {
-  max-width: 43rem;
+  max-width: 34rem;
   margin: 0 auto .62em;
   color: #8b8d9b;
 }
 
 .benefits p {
-  max-width: 43rem;
-  margin: 0 auto .62em;
+  max-width: 34rem;
+  margin: 0 auto;
   color: #6d6f81;
 }
 
 .explanation, .participation {
   width: 50%;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 .explanation {
@@ -235,7 +240,7 @@ header abbr {
 
 .participation {
   display:inline-block;
-  padding: 4em 8% 4em 8%;
+  padding: 4em 8% 4em 10%;
   background: #9bc152;
 }
 
@@ -279,11 +284,11 @@ footer:after {
 footer a {
   float: left;
   box-sizing: border-box;
-  width:20%;
+  width: 20%;
   text-align: center;
   background: #9bc152;
   padding: 1em 0;
-  color: #f6f4ec; 
+  color: #f6f4ec;
   letter-spacing: .05em;
 }
 
@@ -341,7 +346,7 @@ aside {
   font-family: 'Alegreya Sans SC', 'Alegreya Sans', Verdana, Tahoma, sans-serif;
   font-style: normal;
   color: #9bc152;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
 }
 
 .sidebar a:hover {
@@ -370,7 +375,7 @@ aside {
 
 @media (max-width: 64em) {
   body {
-    font-size:1.125em;
+    font-size: 1.125em;
   }
 
   .summary p {
@@ -382,6 +387,7 @@ aside {
   }
 
   .explanation p, .participation p, .preamble p, .requirements p, .benefits p {
+    max-width: 27.5rem;
   }
 }
 
@@ -462,67 +468,147 @@ aside {
 
 @media (min-width: 47em) {
   .benefits {
+    position: absolute;
+    float: left;
+    background: none;
+    max-width: 7.5rem;
+    text-align: right;
+    margin-top: 12em;
+    left: 50%;
+    margin-left: -25.5rem;
   }
 
-.benefits h3 {
+  .benefits h3 {
+    font-size: 1em;
+    margin: 0;
+    font-family: 'Alegreya Sans SC', 'Alegreya Sans', Verdana, Tahoma, sans-serif;
+    font-style: normal;
   }
 
-.benefits p {
-  }
+  .benefits p {
+      font-size: .75em;
+      line-height:1.4;
+    }
 }
 
 @media (min-width: 54em) {
   .benefits {
+    max-width: 8rem;
+    margin-top: 12.5em;
+    margin-left: -28rem;
   }
 }
 
 @media (min-width: 64.125em) {
   .benefits {
+    max-width: 9.4rem;
+    margin-top: 13.1em;
+    margin-left: -34rem;
   }
 
   aside {
+    position: absolute;
+    top: -26.5em;
+    transition: all 0.4s ease;
+    animation: fadein 2s;
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -moz-animation: fadein 2s; /* Firefox */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera */
   }
 
   aside:hover {
+    top: -1em;
   }
 
   aside:after {
+    position: absolute;
+    content: "+";
+    text-align: center;
+    background: #1b1b21;
+    color: #47495d;
+    font-size: 20px;
+    width:30px;
+    height: 30px;
+    border-radius: 30px;
+    bottom: -0.65em;
+    left: 50%;
+    margin-left: -15px;
   }
 
-  aside {
-  }
 }
 
 @media (min-width: 94em) {
   body {
+    font-size: 1.375em;
   }
 
   .summary p {
+   max-width: 49rem;
   }
 
   .benefits {
+   max-width: 12.5rem;
+   margin-left: -41rem;
   }
 
   .explanation h3, .explanation p, .participation h3, .participation p {
+   width: 34rem;
   }
 }
 
 @media (min-width: 120em) {
   body {
+    font-size: 1.5em;
   }
 
   .summary p {
+    max-width: 51rem;
   }
 
   .preamble h3, .preamble p, .requirements h3, .requirements p {
+    max-width: 37.5rem;
   }
 
   .explanation h3, .explanation p, .participation h3, .participation p {
+    width: 37.5rem;
   }
 
   .benefits {
+    margin-left: -49rem;
   }
 }
 
 /* Animations */
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
 
